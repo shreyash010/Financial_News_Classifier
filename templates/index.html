@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Classification</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+           <p>News Classification.</p> 
+        </div>
+    </header>
+    <section class="home">
+        <div class="text-classifier">
+            <div class="heading">
+                <h1>Text Classification</h1>
+            </div>
+            <form action="{{ url_for('predict') }}" method="POST">
+                <div class="textarea-field">
+                    <textarea name="text" rows="4" cols="50" placeholder="Enter text to classify" required></textarea>
+                    <span class="focus"></span>
+                </div>
+                <div class="btn-box btns">
+                    <button class="btn" type="submit">Classify</button>
+                </div>        
+            </form>
+        </div>
+    </section>
+</body>
+</html>
